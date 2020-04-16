@@ -24,8 +24,8 @@ aggrepaypayment
 
     Aggrepay::startPayment($params)->send();
 
-    // Returns response
+    //Returns response
     $result = Aggrepay::aggrepayData($_POST);
 
-    // Returns an json of all the parameters of use in the transaction
+    //Returns an json of all the parameters of use in the transaction
     echo json_encode($result->getParams());
