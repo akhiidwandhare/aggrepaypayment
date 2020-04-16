@@ -84,7 +84,7 @@ class AggrepayResponse
      */
     public function checksumIsValid()
     {
-        $checksumParams = array_reverse(array_merge(['key'], $this->client->getChecksumParams(), ['status', 'salt']));
+        $checksumParams = array_reverse(array_merge(['api_key'], $this->client->getChecksumParams(), ['status', 'salt']));
 
         $params = array_merge($this->params, ['salt' => $this->client->getMerchantSalt()]);
 
