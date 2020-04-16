@@ -1,6 +1,12 @@
 # aggrepaypayment
 aggrepaypayment
 
+    #Open the config/app.php and add this line in providers section.
+    ssi\aggrepaypayment\AggrepayPaymentServiceProvider::class,
+
+    #Add this line in the aliases section.
+    'Aggrepay' => ssi\aggrepaypayment\AggrepayFacade::class
+
     $params = [
         'order_id' => 'test0013', 
         'mode' => 'TEST', 
