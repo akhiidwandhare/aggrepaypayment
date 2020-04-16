@@ -17,3 +17,7 @@ aggrepaypayment
     ];
 
     Aggrepay::startPayment($params)->send();
+
+    $result = Aggrepay::aggrepayData($_POST);
+
+    echo json_encode($result->getParams());
