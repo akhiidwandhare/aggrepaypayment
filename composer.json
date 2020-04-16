@@ -1,0 +1,21 @@
+{
+    "name": "ssi/aggrepaypayment",
+    "description": "Integrate Aggrepay Payments easily with this package.",
+    "type": "library",
+    "version": "1.0",
+    "license": "MIT",
+    "keywords": ["aggrepay","aggrepay payment","aggrepay laravel"],
+    "authors": [
+        {
+            "name": "Sagacity Solutions India",
+            "email": "akhiiw.office@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "ssi\\aggrepaypayment\\": "src/"
+        }
+    }
+}
