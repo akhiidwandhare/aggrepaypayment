@@ -2,7 +2,7 @@
     "name": "ssi/aggrepaypayment",
     "description": "Integrate Aggrepay Payments easily with this package.",
     "type": "library",
-    "version": "1.0",
+    "version": "1.1",
     "license": "MIT",
     "keywords": ["aggrepay","aggrepay payment","aggrepay laravel"],
     "authors": [
