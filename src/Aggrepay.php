@@ -18,6 +18,11 @@ class Aggrepay
     private $SALT;
 
     /**
+     * @var string
+     */
+    private $MODE;
+
+    /**
      * @param array $options
      */
     protected $config;
@@ -30,8 +35,7 @@ class Aggrepay
         }
         $this->config = config('aggrepayconfig');
         $this->KEY = $this->config["KEY"];
-        $this->DEBUG = $this->config["DEBUG"];
-        $this->TEST_MODE = $this->config["TEST_MODE"];
+        $this->MODE = $this->config["MODE"];
         $this->SALT = $this->config["SALT"];
     }
 
@@ -49,6 +53,14 @@ class Aggrepay
     public function getMerchantSalt()
     {
         return $this->SALT;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMode()
+    {
+        return $this->MODE;
     }
 
     /**
@@ -115,7 +127,7 @@ class Aggrepay
             }
         }
 
-        $params = array_merge($params, ['api_key' => $this->getMerchantKey()]);
+        $params = array_merge($params, ['api_key' => $this->getMerchantKey(), 'mode' => $this->getMode()]);
         $params = array_merge($params, ['hash' => $this->getChecksum($params)]);
         $params = array_map(function ($param) {
             return htmlentities($param, ENT_QUOTES, 'UTF-8', false);
