@@ -120,7 +120,7 @@ class Aggrepay
      */
     public function startPayment(array $params)
     {
-        $requiredParams = ['order_id', 'mode', 'amount', 'currency', 'description', 'name', 'email', 'phone', 'city', 'country', 'zip_code', 'return_url'];
+        $requiredParams = ['order_id', 'amount', 'currency', 'description', 'name', 'email', 'phone', 'city', 'country', 'zip_code', 'return_url'];
         foreach ($requiredParams as $requiredParam) {
             if (!isset($params[$requiredParam])) {
                 throw new \InvalidArgumentException(sprintf('"%s" is a required param.', $requiredParam));
