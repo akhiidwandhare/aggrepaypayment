@@ -9,7 +9,6 @@ aggrepaypayment
 
     $params = [
         'order_id' => 'test0013', 
-        'mode' => 'TEST', 
         'amount' => '20.00', 
         'currency' => 'INR', 
         'description' => 'test', 
