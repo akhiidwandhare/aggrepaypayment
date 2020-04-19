@@ -5,7 +5,5 @@ return [
 
     'SALT' => '',
 
-    'TEST_MODE' => TRUE,
-
-    'DEBUG' => FALSE
+    'MODE' => 'TEST'
 ];
