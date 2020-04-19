@@ -35,8 +35,8 @@ class AggrepayPaymentServiceProvider extends ServiceProvider
                 throw new \RuntimeException('missing aggrepay configuration: `SALT`');
             }
 
-            if(!isset($config['TEST_MODE'])){
-                throw new \RuntimeException('missing aggrepay configuration: `TEST_MODE`');
+            if(!isset($config['MODE'])){
+                throw new \RuntimeException('missing aggrepay configuration: `MODE`');
             }
 
             return new Aggrepay($config);
