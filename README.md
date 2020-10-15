@@ -7,6 +7,9 @@ aggrepaypayment
     #Add this line in the aliases section.
     'Aggrepay' => ssi\aggrepaypayment\AggrepayFacade::class
 
+    #Publish vendor.
+    php artisan vendor:publish
+
     $params = [
         'order_id' => 'test0013', 
         'amount' => '20.00', 
